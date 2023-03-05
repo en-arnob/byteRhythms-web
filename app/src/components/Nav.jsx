@@ -14,21 +14,21 @@ const Nav = () => {
   };
   return (
     <nav className='w-full  z-50 fixed inset-x-0 px-5 top-5  flex justify-center items-center'>
-      <div className='w-full md:w-880 bg-naV p-4 rounded-xl flex items-center'>
-        <SiByte className='text-navT mr-2' />
-        <p className='text-lg text-navT font-medium'>byteRhythms Tech.</p>
+      <div className='w-full md:w-880 bg-[#5D9C59] p-4 rounded-xl flex items-center'>
+        <SiByte className='text-white mr-2' />
+        <p className='text-lg text-white font-medium'>byteRhythms Tech.</p>
         <div className='hidden md:flex items-center justify-end mr-6 gap-6 flex-1'>
-          <li className='text-base list-none text-navT  font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
+          <li className='text-base list-none text-white  font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
             <Link to='services' smooth={true}>
               Services
             </Link>
           </li>
-          <li className='text-base list-none text-navT font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
+          <li className='text-base list-none text-white font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
             <Link to='about' smooth={true}>
               About
             </Link>
           </li>
-          <li className='text-base list-none text-navT font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
+          <li className='text-base list-none text-white font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
             <Link to='contact' smooth={true}>
               Contact
             </Link>
