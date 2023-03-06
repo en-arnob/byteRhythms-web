@@ -16,7 +16,12 @@ const Nav = () => {
     <nav className='w-full  z-50 fixed inset-x-0 px-5 top-5  flex justify-center items-center'>
       <div className='w-full md:w-880 bg-[#5D9C59] p-4 rounded-xl flex items-center'>
         <SiByte className='text-white mr-2' />
-        <p className='text-lg text-white font-medium'>byteRhythms Tech.</p>
+        <p className='text-lg cursor-pointer text-white font-medium'>
+          {" "}
+          <Link to='home' smooth={true}>
+            byteRhythms Tech.
+          </Link>
+        </p>
         <div className='hidden md:flex items-center justify-end mr-6 gap-6 flex-1'>
           <li className='text-base list-none text-white  font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
             <Link to='services' smooth={true}>
