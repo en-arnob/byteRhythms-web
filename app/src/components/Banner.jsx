@@ -3,7 +3,8 @@ import st from "../resources/Startup_Two.svg";
 
 import { CgMouse } from "react-icons/cg";
 import { motion } from "framer-motion";
-import BannerSecond from "./BannerSecond";
+import BannerSecond from "./BannerParts/BannerSecond";
+import BannerThird from "./BannerParts/BannerThird";
 
 const Banner = () => {
   const fadeLeft = {
@@ -83,30 +84,7 @@ const Banner = () => {
               <BannerSecond />
 
               <div className='flex flex-col justify-between flex-1 h-full'>
-                <div>
-                  <h1 className='text-4xl font-bold text-black sm:text-2xl xl:text-4xl'>
-                    Get the most advanced
-                    <br />
-                    ERP, POS, BLA, BLA, BLA
-                  </h1>
-                  <p className='mt-6 text-base text-black sm:text-xl'>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat.
-                  </p>
-                  <a
-                    href='/'
-                    title=''
-                    className='inline-flex items-center px-6 py-5 text-base font-semibold text-black transition-all duration-200 bg-green-300 mt-9 hover:bg-green-400 focus:bg-green-400'
-                    role='button'
-                  >
-                    {" "}
-                    Contact Us{" "}
-                  </a>
-                </div>
+                <BannerThird />
 
                 <div className='mt-8 border-t-2 border-black lg:mt-auto sm:mt-14'></div>
               </div>

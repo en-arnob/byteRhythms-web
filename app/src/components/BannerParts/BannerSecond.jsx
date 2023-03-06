@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import erp from "../resources/erp-system.png";
+import erp from "../../resources/erp-system.png";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
