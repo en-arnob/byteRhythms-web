@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+// import React, { useEffect } from "react";
+import React from "react";
+// import { useAnimation, motion } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
 
 // const fadeRight = {
 //   hidden: { opacity: 1, x: 100 },
@@ -29,7 +30,7 @@ const BannerThird = () => {
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
         velit esse cillum dolore eu fugiat.
       </p>
-      <motion.a
+      <a
         // ref={ref}
         // animate={controls}
         // initial='hidden'
@@ -41,7 +42,7 @@ const BannerThird = () => {
       >
         {" "}
         Contact Us{" "}
-      </motion.a>
+      </a>
     </div>
   );
 };
