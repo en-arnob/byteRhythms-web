@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import RCT from "../resources/aspx-svgrepo-com.svg";
 import ERP from "../resources/analysis-svgrepo-com.svg";
@@ -7,7 +9,32 @@ import ECM from "../resources/shop-store-online-internet-svgrepo-com.svg";
 import POS from "../resources/point-of.svg";
 import INV from "../resources/device-manager-svgrepo-com.svg";
 
+const appearLeft = {
+  hidden: { opacity: 0, x: "-100%" },
+  visible: { opacity: 1, x: 0 },
+};
+const appearRight = {
+  hidden: { opacity: 0, x: "100%" },
+  visible: { opacity: 1, x: 0 },
+};
+
+const appearUp = {
+  hidden: { opacity: 0, y: "100%" },
+  visible: { opacity: 1, y: 0 },
+};
+const appearDown = {
+  hidden: { opacity: 0, y: "-100%" },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Services = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
     <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
       <div name='services'>
@@ -38,12 +65,23 @@ const Services = () => {
                 </div>
 
                 <div class=' mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3'>
-                  <a
+                  <motion.a
+                    ref={ref}
+                    animate={controls}
+                    initial='hidden'
+                    variants={appearLeft}
                     class='block rounded-xl border border-gray-200  p-4 shadow-sm hover:border-sky-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/web'
                   >
                     <span class='inline-block rounded-lg  p-3'>
-                      <img src={RCT} alt='' />
+                      <motion.img
+                        ref={ref}
+                        animate={controls}
+                        initial='hidden'
+                        variants={appearLeft}
+                        src={RCT}
+                        alt=''
+                      />
                     </span>
 
                     <h2 class='mt-2 font-bold'>Web Application</h2>
@@ -51,9 +89,13 @@ const Services = () => {
                     <p class='hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600'>
                       Lorem ipsum dolor sit amet consectetur.
                     </p>
-                  </a>
+                  </motion.a>
 
-                  <a
+                  <motion.a
+                    ref={ref}
+                    animate={controls}
+                    initial='hidden'
+                    variants={appearDown}
                     class='block rounded-xl border border-gray-200  p-4 shadow-sm hover:border-green-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/erp'
                   >
@@ -66,9 +108,13 @@ const Services = () => {
                     <p class='hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600'>
                       Enterprise Resource Planning
                     </p>
-                  </a>
+                  </motion.a>
 
-                  <a
+                  <motion.a
+                    ref={ref}
+                    animate={controls}
+                    initial='hidden'
+                    variants={appearRight}
                     class='block rounded-xl border  p-4 shadow-sm border-gray-200 hover:border-red-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/lms'
                   >
@@ -81,9 +127,13 @@ const Services = () => {
                     <p class='hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600'>
                       Learning Management System
                     </p>
-                  </a>
+                  </motion.a>
 
-                  <a
+                  <motion.a
+                    ref={ref}
+                    animate={controls}
+                    initial='hidden'
+                    variants={appearLeft}
                     class='block rounded-xl border border-gray-200 p-4 shadow-sm hover:border-orange-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/pos'
                   >
@@ -96,9 +146,13 @@ const Services = () => {
                     <p class='hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600'>
                       Point of Sale Software
                     </p>
-                  </a>
+                  </motion.a>
 
-                  <a
+                  <motion.a
+                    ref={ref}
+                    animate={controls}
+                    initial='hidden'
+                    variants={appearUp}
                     class='block rounded-xl border border-gray-200 p-4 shadow-sm hover:border-blue-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/ecom'
                   >
@@ -111,9 +165,13 @@ const Services = () => {
                     <p class='hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600'>
                       Ecommerce Site Implementation
                     </p>
-                  </a>
+                  </motion.a>
 
-                  <a
+                  <motion.a
+                    ref={ref}
+                    animate={controls}
+                    initial='hidden'
+                    variants={appearRight}
                     class='block rounded-xl border border-gray-200 p-4 shadow-sm hover:border-yellow-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/inventory'
                   >
@@ -126,7 +184,7 @@ const Services = () => {
                     <p class='hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600'>
                       Inventory and Billing Management{" "}
                     </p>
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </div>
