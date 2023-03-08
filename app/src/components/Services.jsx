@@ -11,20 +11,56 @@ import INV from "../resources/device-manager-svgrepo-com.svg";
 
 const appearLeft = {
   hidden: { opacity: 0, x: "-100%" },
-  visible: { opacity: 1, x: 0 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      delay: Math.random(),
+      duration: 2,
+    },
+  },
 };
 const appearRight = {
   hidden: { opacity: 0, x: "100%" },
-  visible: { opacity: 1, x: 0 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      delay: Math.random(),
+      duration: 2,
+    },
+  },
 };
 
 const appearUp = {
   hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      delay: Math.random(),
+      duration: 2,
+    },
+  },
 };
 const appearDown = {
   hidden: { opacity: 0, y: "-100%" },
-  visible: { opacity: 1, y: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      delay: Math.random(),
+      duration: 2,
+    },
+  },
 };
 
 const Services = () => {
@@ -58,7 +94,7 @@ const Services = () => {
 
                   <a
                     href='/'
-                    class='mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400'
+                    class='mt-8 inline-block rounded bg-yellow-400 px-12 py-3 text-sm font-medium text-black transition hover:bg-[#4ADE80] focus:outline-none focus:ring focus:ring-yellow-400'
                   >
                     Send an email
                   </a>
@@ -70,6 +106,11 @@ const Services = () => {
                     animate={controls}
                     initial='hidden'
                     variants={appearLeft}
+                    whileHover={{
+                      scale: 1.1,
+                      transition: { duration: 1 },
+                    }}
+                    whileTap={{ scale: 0.9 }}
                     class='block rounded-xl border border-gray-200  p-4 shadow-sm hover:border-sky-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/web'
                   >
@@ -79,6 +120,11 @@ const Services = () => {
                         animate={controls}
                         initial='hidden'
                         variants={appearLeft}
+                        whileHover={{
+                          scale: 1.1,
+                          transition: { duration: 1 },
+                        }}
+                        whileTap={{ scale: 0.9 }}
                         src={RCT}
                         alt=''
                       />
@@ -96,6 +142,11 @@ const Services = () => {
                     animate={controls}
                     initial='hidden'
                     variants={appearDown}
+                    whileHover={{
+                      scale: 1.1,
+                      transition: { duration: 1 },
+                    }}
+                    whileTap={{ scale: 0.9 }}
                     class='block rounded-xl border border-gray-200  p-4 shadow-sm hover:border-green-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/erp'
                   >
@@ -115,6 +166,11 @@ const Services = () => {
                     animate={controls}
                     initial='hidden'
                     variants={appearRight}
+                    whileHover={{
+                      scale: 1.1,
+                      transition: { duration: 1 },
+                    }}
+                    whileTap={{ scale: 0.9 }}
                     class='block rounded-xl border  p-4 shadow-sm border-gray-200 hover:border-red-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/lms'
                   >
@@ -134,6 +190,11 @@ const Services = () => {
                     animate={controls}
                     initial='hidden'
                     variants={appearLeft}
+                    whileHover={{
+                      scale: 1.1,
+                      transition: { duration: 1 },
+                    }}
+                    whileTap={{ scale: 0.9 }}
                     class='block rounded-xl border border-gray-200 p-4 shadow-sm hover:border-orange-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/pos'
                   >
@@ -153,6 +214,11 @@ const Services = () => {
                     animate={controls}
                     initial='hidden'
                     variants={appearUp}
+                    whileHover={{
+                      scale: 1.1,
+                      transition: { duration: 1 },
+                    }}
+                    whileTap={{ scale: 0.9 }}
                     class='block rounded-xl border border-gray-200 p-4 shadow-sm hover:border-blue-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/ecom'
                   >
@@ -172,6 +238,11 @@ const Services = () => {
                     animate={controls}
                     initial='hidden'
                     variants={appearRight}
+                    whileHover={{
+                      scale: 1.1,
+                      transition: { duration: 1 },
+                    }}
+                    whileTap={{ scale: 0.9 }}
                     class='block rounded-xl border border-gray-200 p-4 shadow-sm hover:border-yellow-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring'
                     href='/inventory'
                   >

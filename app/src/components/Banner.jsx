@@ -20,8 +20,11 @@ const Banner = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div>
-      <section className='py-10 sm:py-16 lg:py-24'>
+    <div
+      name='home'
+      className=' mt-20 pt-10 md:pt-5  md:mt-40 h-auto  md:ml-20 md:mr-20'
+    >
+      <section className=''>
         <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
           <div className='grid items-center grid-cols-1 gap-12 lg:grid-cols-2'>
             <div>

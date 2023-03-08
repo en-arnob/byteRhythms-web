@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='flex w-screen h-auto bg-[#EBFDF1] min-h-screen flex-col  justify-center relative'>
       <Nav />
-      <div id='home' className='relative mt-10'>
+      <div id='home' className='relative'>
         <Banner id='home' className='drop-shadow-xl' />
       </div>
       <Services />
