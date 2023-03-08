@@ -22,7 +22,7 @@ const Banner = () => {
   return (
     <div
       name='home'
-      className=' mt-20 pt-10 md:pt-5  md:mt-40 h-auto  md:ml-20 md:mr-20'
+      className=' mt-20 pt-10 md:pt-5  md:mt-36 h-auto  md:ml-20 md:mr-20'
     >
       <section className=''>
         <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>

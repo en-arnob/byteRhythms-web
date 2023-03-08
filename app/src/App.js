@@ -1,6 +1,8 @@
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
+import Reviews from "./components/Reviews";
 import Services from "./components/Services";
+import Techs from "./components/Techs";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <Banner id='home' className='drop-shadow-xl' />
       </div>
       <Services />
+      <Techs />
+      <Reviews />
     </div>
   );
 }
