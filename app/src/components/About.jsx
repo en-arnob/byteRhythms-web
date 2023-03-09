@@ -58,7 +58,7 @@ const About = () => {
             <div className='mt-4 flex flex-wrap justify-center gap-4'>
               <a
                 className='w-full flex bg-gray-700 hover:bg-[#1773EA] rounded px-12 py-3 text-sm font-medium text-white shadow  focus:outline-none focus:ring  sm:w-auto'
-                href='/get-started'
+                href='/'
               >
                 <BsFacebook className='text-xl mr-2' />
                 Facbook
@@ -66,7 +66,7 @@ const About = () => {
 
               <a
                 className='w-full flex bg-gray-700 hover:bg-[#0073B1] rounded px-12 py-3 text-sm font-medium text-white shadow  focus:outline-none focus:ring  sm:w-auto'
-                href='/get-started'
+                href='/'
               >
                 <BsLinkedin className='text-xl mr-2' />
                 LinkedIn

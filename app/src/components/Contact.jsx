@@ -66,7 +66,7 @@ const Contact = () => {
               <span className='mb-1'>Full name</span>
               <input
                 type='text'
-                placeholder='Leroy Jenkins'
+                placeholder='Khalid Arnob'
                 className='block p-2 w-full rounded-md shadow '
               />
             </label>
@@ -74,7 +74,7 @@ const Contact = () => {
               <span className='mb-1'>Email address</span>
               <input
                 type='email'
-                placeholder='leroy@jenkins.com'
+                placeholder='en.arnob@gmail.com'
                 className='block p-2 w-full rounded-md shadow '
               />
             </label>
