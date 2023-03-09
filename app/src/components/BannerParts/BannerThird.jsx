@@ -18,7 +18,7 @@ const BannerThird = () => {
   //   }, [controls, inView]);
   return (
     <div>
-      <h1 className='text-4xl font-bold text-black sm:text-2xl xl:text-4xl'>
+      <h1 className='text-4xl font-bold text-bg sm:text-2xl xl:text-4xl'>
         Get the most advanced
         <br />
         ERP, POS, BLA, BLA, BLA

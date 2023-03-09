@@ -1,4 +1,7 @@
+import About from "./components/About";
 import Banner from "./components/Banner";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Reviews from "./components/Reviews";
 import Services from "./components/Services";
@@ -12,8 +15,11 @@ function App() {
         <Banner id='home' className='drop-shadow-xl' />
       </div>
       <Services />
+      <About/>
       <Techs />
       <Reviews />
+      <Contact/>
+      <Footer/>
     </div>
   );
 }

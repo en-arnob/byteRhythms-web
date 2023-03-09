@@ -5,7 +5,7 @@ import SN from "../resources/microsoft-satya-nadella-article-image.jpg";
 
 const Reviews = () => {
   return (
-    <div>
+    <div className='mb-10'>
       <section class=''>
         <div class='mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8'>
           <h2 class='text-center text-4xl font-bold tracking-tight sm:text-5xl'>

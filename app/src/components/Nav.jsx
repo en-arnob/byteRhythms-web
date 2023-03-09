@@ -45,7 +45,7 @@ const Nav = () => {
             className='block md:hidden ml-auto cursor-pointer'
             onClick={() => setIsActive(!isActive)}
           >
-            <CgMenuLeft className='text-sky-500 font-medium text-2xl cursor-pointer' />
+            <CgMenuLeft className='text-white font-medium text-2xl cursor-pointer' />
           </motion.div>
         )}
         {isActive && (
@@ -54,7 +54,7 @@ const Nav = () => {
             className='block md:hidden ml-auto cursor-pointer'
             onClick={() => setIsActive(!isActive)}
           >
-            <CgMenuMotion className='text-rose-400 font-medium text-2xl cursor-pointer' />
+            <CgMenuMotion className='text-gray-900 font-medium text-2xl cursor-pointer' />
           </motion.div>
         )}
 
@@ -64,7 +64,7 @@ const Nav = () => {
             initial='hidden'
             animate={"visible"}
             transition={{ duration: 1, type: "spring", stiffness: 100 }}
-            className='p-6 w-screen bg-navBar rounded-xl fixed top-24 flex flex-col text-center items-center border-l-4 border-red-400 justify-evenly gap-6'
+            className='p-6 w-screen bg-[#FFC107] rounded-xl fixed top-24 flex flex-col text-center items-center border-l-4 border-[#5D9C59] justify-evenly gap-6'
           >
             <li className='text-xl list-none text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
               <Link to='home' smooth={true} onClick={() => setIsActive(false)}>
@@ -72,13 +72,17 @@ const Nav = () => {
               </Link>
             </li>
             <li className='text-xl list-none text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
-              <Link to='about' smooth={true} onClick={() => setIsActive(false)}>
-                About
+              <Link
+                to='services'
+                smooth={true}
+                onClick={() => setIsActive(false)}
+              >
+                Services
               </Link>
             </li>
             <li className='text-xl list-none text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
-              <Link to='works' smooth={true} onClick={() => setIsActive(false)}>
-                Works
+              <Link to='about' smooth={true} onClick={() => setIsActive(false)}>
+                About
               </Link>
             </li>
             <li className='text-xl list-none text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
