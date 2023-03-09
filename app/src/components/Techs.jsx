@@ -9,7 +9,7 @@ import { SiNextdotjs, SiMongodb, SiMysql } from "react-icons/si";
 const Techs = () => {
   return (
     <div>
-      <section className='dark:bg-gray-800  dark:text-gray-100'>
+      <section className='bg-gray-800  text-gray-100'>
         <div className='container p-6 mx-auto space-y-6 text-center lg:p-8 lg:space-y-8'>
           <h2 className=' text-3xl text-center items-center justify-center flex font-bold pb-10 cursor-default '>
             We use and{" "}
